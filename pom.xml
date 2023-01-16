@@ -135,19 +135,7 @@
 
 	</dependencies>
 	<build>
-        <plugins>
-             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.tutorialspoint.MainApp</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            
+        <plugins>            
             <plugin>
 	            <groupId>org.apache.maven.plugins</groupId>
 	            <artifactId>maven-assembly-plugin</artifactId>
@@ -157,6 +145,11 @@
 	                <descriptorRefs>
 	                    <descriptorRef>jar-with-dependencies</descriptorRef>
 	                </descriptorRefs>
+	                <archive>
+                        <manifest>
+                            <mainClass>com.tutorialspoint.MainApp</mainClass>
+                        </manifest>
+                    </archive>
 	            </configuration>
 	
 	            <executions>
